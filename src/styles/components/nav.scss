@@ -1,0 +1,19 @@
+@import '../mixin.scss';
+.nav{
+   @include Flex-Box(1,center,center);
+   @include Box-Properties(auto,100%,hidden);
+   @include Position-Properties(relative,auto,auto,auto,auto,3);
+   backdrop-filter: blur(2px);
+   .sub{
+      @include Box-Properties(100%,95%,hidden);
+      @include Flex-Box(none,center,space-between);
+      .img-box{img{
+          @include Image-Design(contain,center,55px,55px)
+      }}
+      .menu-box{@include Flex-Box(none,flex-start,flex-start,row,15px);
+      .item{
+         @include Design-Color(#fff,none,0px,0,5px 14px);
+         @include Font-Properties(#fff,18px,400,3px);cursor: pointer;
+      }}
+   }
+}

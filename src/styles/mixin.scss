@@ -1,0 +1,57 @@
+$mainFontFamily:  'Poppins', sans-serif;
+@mixin Flex-Box($flex: 0 1 auto,$alignItem: stretch, $justifyContent: flex-start, $flexDirection: row, $gap: 0) {
+    display: flex;
+    flex: $flex;
+    align-items: $alignItem;
+    justify-content: $justifyContent;
+    flex-direction: $flexDirection;
+    gap: $gap;
+}
+@mixin Design-Color($color: #333, $backgroundColor: #fff, $borderRadius: 0, $border: 0, $padding: 0, $margin: 0) {
+    color: $color;
+    background-color: $backgroundColor;
+    border-radius: $borderRadius;
+    border: $border;
+    padding: $padding;
+    margin: $margin;
+}
+@mixin Box-Properties($height: auto,$width: auto,$overflow: visible,$BoxSizing:border-box,$minHeight: 0,$minWidth: 0,$maxHeight: none,$maxWidth: none,) {
+  height: $height;
+  width: $width;
+  box-sizing: $BoxSizing;
+  overflow: $overflow;
+  min-height: $minHeight;
+  min-width: $minWidth;
+  max-height: $maxHeight;
+  max-width: $maxWidth;
+}
+@mixin Position-Properties($position: static,$top: auto,$bottom: auto,$left: auto,$right: auto,$zIndex: auto,$transform:none){
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    z-index: $zIndex;
+    transform: $transform;
+}
+@mixin Font-Properties($color:#333,$size:16px,$weight:400,$spacing:0px,$lineHeight:normal,$family:$mainFontFamily){
+font-size: $size;
+font-weight: $weight;
+letter-spacing: $spacing;
+color: $color;
+line-height: $lineHeight;
+font-family: $family;
+}
+@mixin Image-Design($ObjectFit:contain,$ObjectPosition:center,$height:auto,$width:auto,$BorderRadius:0){
+  object-fit: $ObjectFit;
+  object-position: $ObjectPosition;
+  height: $height;
+  width: $width;
+  border-radius: $BorderRadius;
+}
+@mixin Grid-Box($columns: 0, $gap: 0, $justify-items: flex-start) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+  justify-items: $justify-items;
+}

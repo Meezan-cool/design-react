@@ -1,0 +1,16 @@
+@import '../mixin.scss';
+.blureff{
+    @include Position-Properties(fixed,0,auto,0,auto,2);
+    @include Box-Properties(100%,100%);
+
+    .blur-sidedshow{
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+    }
+    .blur-nav{
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+    }
+}

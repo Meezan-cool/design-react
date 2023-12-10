@@ -1,0 +1,16 @@
+@import '../mixin.scss';
+.hero{
+    @include Flex-Box(5,flex-start,flex-start,row);
+    @include Box-Properties(auto,100%,hidden);
+    @include Position-Properties(relative,auto,auto,auto,auto,3);
+    .sideshow{
+        @include Flex-Box(1,flex-start,flex-start,column);
+        @include Box-Properties(100%,auto,hidden);}
+    .mainshow{
+        @include Flex-Box(2.5,flex-start,flex-start,column);
+        @include Box-Properties(100%,auto);
+        @include Design-Color(#fff,none,0px,2px solid #b7d4d9);
+        backdrop-filter: blur(0px);
+        border-right: none;
+        border-bottom: none;
+    }}
